@@ -34,6 +34,8 @@ It consists of 4 manager processes labeled 0 to 3, which are connected through a
 
 Every manager process is also connected to a number of worker processes, and there aren't worker processes connected to more than 1 manager.
 
+![topology](https://user-images.githubusercontent.com/74200913/215343900-ac04b288-e1e0-4c27-89ff-f532d11afd6f.png)
+
 In the beginning, each manager reads from its `cluster.txt` file to find out which processes are its workers, then sends and receives MPI messages to and from the other managers to find out the entire topology.
 
 When a manager has received the entire topology, it prints it to the console and sends it all its workers, who finally "find out" who their manager is, and they also print it.
