@@ -85,7 +85,7 @@ The main challenge was making sure that the array is split as fairly as possible
 
 To do that, manager 0 computes locally the optimal number of elements each manager should transform, such that the difference between the elements multiplied by the "busiest" worker and the elements multiplied by the "laziest" worker is at most 1.
 
-Another challenge was making sure the workers send back their resulting array to their corresponding manager. This is because each worker virtually executes the same code, and there is no way to separate the workers of one manager and those of another without knowing the topology before running the code.
+Another challenge was making sure that the workers send back their resulting array to their corresponding manager. This is because each worker virtually executes the same code, and there is no way to separate the workers of one manager and those of another without knowing the topology before running the code.
 
 The solution was sending the modified array to `status.MPI_SOURCE`, since every worker gets inside `status` the rank of the process that send them the array, which is precisely the rank of their manager.
 
