@@ -8,7 +8,7 @@ To do this, it uses two types of processes: manager processes, of which there ar
 
 They communicate with one another through an intricate sequence of MPI messages.
 
-It took me an entire day to code during January 2023 and it serves as a culmination of both my understanding of distributed computing, as well as my ability to code a complex application from scratch in one single day.
+It took me an entire day to code this during January 2023 and it serves as a culmination of both my understanding of distributed computing, as well as my ability to code a complex application from scratch in one single day.
 
 ## 🔧 How to run it?
 
